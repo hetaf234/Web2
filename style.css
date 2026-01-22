@@ -1,7 +1,9 @@
+/* Reset */
 * {
   box-sizing: border-box;
 }
 
+/* Base */
 body {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
@@ -9,7 +11,7 @@ body {
   color: #1a1a1a;
 }
 
-/* Main content */
+/* Main layout */
 .main {
   min-height: calc(100vh - 180px);
   display: flex;
@@ -20,111 +22,248 @@ body {
 
 .card {
   text-align: center;
-  max-width: 750px;
   width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
+/* Headings */
 h1 {
   font-size: 48px;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
+  font-weight: 700;
 }
 
 .subtitle {
   font-size: 14px;
-  margin-bottom: 25px;
+  margin: 0 0 25px;
 }
 
-
+/* Logo */
 .logo {
   width: 100%;
-  max-width: 520px;
-  height: 260px;
+  max-width: 420px;  
   margin: 0 auto 25px;
-  background: #eee;
-  border: 1px solid #d9d9d9;
+  display: flex;
+  justify-content: center;
 }
 
 .logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+width: 100%;
+  max-width: 420px;  
+  height: auto;
+  display: block;
+  border: 1px solid #d7d7d7;
+  background: #eeeeee;
 }
 
-/* Button */
+/* Buttons */
 .btn {
-  display: inline-block;
-  background: #f1e8d3;
-  color: #000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   text-decoration: none;
-  padding: 14px 18px;
-  min-width: 360px;
-  font-size: 28px;
+  color: #1a1a1a;
+  border: 2px solid #bdbdbd;
   border-radius: 8px;
-  border: 1px solid #999;
+
+  height: 56px;       
+  font-size: 20px;
+
+  background: #fdfaf3;
+
 }
 
 .btn:hover {
-  background: #eadfbe;
+  background: #f7f3e8;
 }
 
-/* Sign up text */
-.new-here {
-  margin-top: 26px;
+.btn-wide {
+  width: min(420px, 90%);
+}
+
+/* Text links */
+.hint {
+  margin: 40px 0 0;
   font-size: 26px;
 }
 
-.new-here a {
-  color: #000;
+.link-underline {
+  color: #1a1a1a;
   text-decoration: underline;
 }
 
 /* Footer */
 .footer {
-  background: #fdfaf3;
-  border-top: 2px solid #d9d9d9;
-  padding: 25px 20px;
+  background: #fdfaf3; /* footer color */
+  border-top: 2px solid #bdbdbd;
+  padding: 24px 20px 40px;
 }
 
+
 .footer-inner {
-  max-width: 980px;
-  margin: auto;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-left {
+ font-size: 22px;
+  margin: 0 0 16px;
   text-align: center;
 }
 
-.contact-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  font-family: Arial, sans-serif;
-}
-
-.footer-contact {
+.footer-mid {
   display: flex;
-  justify-content: center;
-  gap: 80px;
-  margin-bottom: 15px;
+  justify-content: center;  
+  gap: 40px;               
   flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 18px;
 }
 
 .contact-item {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
 }
 
-.contact-item img {
+/* Icons (email / phone images) */
+.icon {
   width: 22px;
   height: 22px;
+  display: inline-block;
+  object-fit: contain;
 }
 
-.contact-item a {
-  color: #000;
+/* Footer links */
+.footer-link {
+  color: #1a1a1a;
   text-decoration: underline;
 }
 
-copyright {
-  font-size: 12px;
-  font-family: Arial, sans-serif;
+.footer-bottom {
+  text-align: center;
+  font-size: 18px;
+}
+
+
+/* Login Form */
+.login-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.login-form fieldset {
+  border: 2px solid #bdbdbd;
+  padding: 30px 25px 35px;
+}
+
+.login-form legend {
+  font-size: 36px;
+  padding: 0 10px;
+  font-weight: 700;
+}
+
+.login-form label {
+  display: block;
+  font-size: 20px;
+  margin: 20px 0 10px;
+  text-align: left;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #f2f2f2;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+}
+
+.login-form button,
+.login-form a.btn {
+  margin-top: 25px;
+}
+button,
+input,
+textarea,
+select {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* Sign Up */
+.auth-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.auth-form fieldset {
+  border: 2px solid #bdbdbd;
+  padding: 30px 25px 35px;
+}
+
+.auth-form legend {
+  font-size: 36px;
+  padding: 0 10px;
+  font-weight: 700;
+}
+
+.auth-form label {
+  display: block;
+  font-size: 20px;
+  margin: 20px 0 10px;
+  text-align: left;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #f2f2f2;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+}
+
+.auth-form input[type="file"] {
+  display: none;
+}
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 10px 0 25px;
+}
+
+.file-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 40px;
+  padding: 0 14px;
+
+  border: 2px solid #bdbdbd;
+  border-radius: 8px;
+  background: #fdfaf3;
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.profile-preview {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #bdbdbd;
+  object-fit: cover;
+  background: #eeeeee;
+}
+.auth-form .btn {
+  margin-top: 16px;  
 }

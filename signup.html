@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sapori D'Italia - Sign Up</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="main">
+    <section class="card">
+      <h1>Sapori D&#39;Italia</h1>
+
+      <div class="logo">
+        <img src="image/logo.png" alt="Sapori D&#39;Italia logo">
+      </div>
+
+      <form class="auth-form" action="userPage.html" method="get">
+        <fieldset>
+          <legend>Sign Up</legend>
+
+          <label for="firstName">First Name:</label>
+          <input id="firstName" name="firstName" type="text" placeholder="Type your first name" required>
+
+          <label for="lastName">Last Name:</label>
+          <input id="lastName" name="lastName" type="text" placeholder="Type your last name" required>
+
+          <label for="email">Email Address:</label>
+          <input id="email" name="email" type="email" placeholder="Type your email" required>
+
+          <label for="password">Password:</label>
+          <input id="password" name="password" type="password" placeholder="Type your password" required>
+
+          <label>Profile Image:</label>
+
+          <div class="profile-row">
+            <label class="file-btn" for="profileImage">Choose Image</label>
+            <input id="profileImage" name="profileImage" type="file">
+
+            <!-- default image -->
+            <img
+              id="profilePreview"
+              class="profile-preview"
+              src="image/icon.png"
+              alt="Default profile image"
+            >
+          </div>
+
+          <button class="btn btn-wide" type="submit">Create Account</button>
+
+          <button
+            class="btn btn-wide"
+            type="button"
+            onclick="window.location.href='index.html'">
+            Back
+          </button>
+
+        </fieldset>
+      </form>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>Contact Us:</strong>
+      </div>
+
+      <div class="footer-mid">
+        <span class="contact-item">
+          <img class="icon" src="image/email.png" alt="Email icon">
+          <a class="footer-link" href="mailto:Sapori.DItalia@gmail.com">Sapori.DItalia@gmail.com</a>
+        </span>
+
+        <span class="contact-item">
+          <img class="icon" src="image/phone.png" alt="Phone icon">
+          <a class="footer-link" href="tel:+966556678127">+966 556678127</a>
+        </span>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 <a class="footer-link" href="index.html">Sapori D&#39;Italia</a>. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Preview uploaded image , If no upload, default stays. -->
+  <script>
+    const fileInput = document.getElementById('profileImage');
+    const preview = document.getElementById('profilePreview');
+
+    fileInput.addEventListener('change', function () {
+      const file = this.files && this.files[0];
+      if (!file) return;
+
+      const url = URL.createObjectURL(file);
+      preview.src = url;
+    });
+  </script>
+
+</body>
+</html>
