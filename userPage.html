@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sapori D'Italia - User Page</title>
+  <link rel="stylesheet" href="user.css" />
+  <script src="user.js"></script>
+
+</head>
+
+<body class="user-page">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="image/logo.png" alt="Sapori D'Italia Logo">
+    </div>
+
+<button id="logoutBtn" class="btn btn-small btn-wideish" type="button">Log out</button>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+    <section class="card">
+
+      <h1>Sapori D&#39;Italia</h1>
+      <p class="subtitle">All available recipes and your favourites</p>
+
+      <div class="layout">
+
+        <!-- My Information -->
+        <div class="info-box">
+          <h2>My Information</h2>
+
+          <img src="image/icon.png" alt="icon photo">
+
+          <p><strong>Emily Anderson</strong></p>
+          <p>Email: emily@gmail.com</p>
+
+          <hr>
+
+          <h3>My Recipes</h3>
+          <p>Total Recipes: 8</p>
+          <p>Total Likes: 42</p>
+        </div>
+
+        <!-- All Available Recipes -->
+        <div class="recipes-box">
+
+          <div class="filter-row">
+            <input type="text" placeholder="Search...">
+<button class="btn btn-small btn-filter" type="button">Filter</button>
+          </div>
+
+          <h2>All Available Recipes</h2>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Recipe Name</th>
+                <th>Photo</th>
+                <th>Creator</th>
+                <th>Category</th>
+                <th>Likes</th>
+                <th>Fav</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Cornetto</td>
+                <td><img src="image/cornetto.png" alt="Cornetto"></td>
+                <td>Marco</td>
+                <td>Breakfast</td>
+                <td>56</td>
+                <td><span class="heart">♡</span></td>
+              </tr>
+
+              <tr>
+                <td>Frittata</td>
+                <td><img src="image/frittata.jpg" alt="Frittata"></td>
+                <td>Lucia</td>
+                <td>Breakfast</td>
+                <td>73</td>
+                <td><span class="heart">♡</span></td>
+              </tr>
+
+              <tr>
+                <td>Ricotta Toast</td>
+                <td><img src="image/ricotta_toast.jpg" alt="Ricotta Toast"></td>
+                <td>Anna</td>
+                <td>Breakfast</td>
+                <td>41</td>
+                <td><span class="heart">♡</span></td>
+              </tr>
+
+              <tr>
+                <td>Margherita Pizza</td>
+                <td><img src="image/pizza_margherita.jpg" alt="Margherita Pizza"></td>
+                <td>Luigi</td>
+                <td>Lunch</td>
+                <td>128</td>
+                <td><span class="heart">♡</span></td>
+              </tr>
+
+              <tr>
+                <td>Carbonara</td>
+                <td><img src="image/carbonara.png" alt="Carbonara"></td>
+                <td>Paolo</td>
+                <td>Lunch</td>
+                <td>142</td>
+                <td><span class="heart">♡</span></td>
+              </tr>
+
+              <tr>
+                <td>Lasagna</td>
+                <td><img src="image/lasagna.png" alt="Lasagna"></td>
+                <td>Sofia</td>
+                <td>Lunch</td>
+                <td>119</td>
+                <td><span class="heart">♡</span></td>
+              </tr>
+
+              <tr>
+                <td>Tiramisu</td>
+                <td><img src="image/tiramisu.png" alt="Tiramisu"></td>
+                <td>Giulia</td>
+                <td>Dessert</td>
+                <td>210</td>
+                <td><span class="heart">♡</span></td>
+              </tr>
+
+              <tr>
+                <td>Panna Cotta</td>
+                <td><img src="image/panna_cotta.png" alt="Panna Cotta"></td>
+                <td>Elena</td>
+                <td>Dessert</td>
+                <td>98</td>
+                <td><span class="heart">♡</span></td>
+              </tr>
+
+              <tr>
+                <td>Cannoli</td>
+                <td><img src="image/cannoli.png" alt="Cannoli"></td>
+                <td>Marco</td>
+                <td>Dessert</td>
+                <td>134</td>
+                <td><span class="heart">♡</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+      <!-- Favourite Recipes -->
+      <div class="favourites-box">
+        <h2>My Favourite Recipes</h2>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Recipe Name</th>
+              <th>Photo</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Cannoli</td>
+              <td><img src="image/cannoli.png" alt="Cannoli"></td>
+<td><a href="#" class="remove-link">Remove</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>Contact Us:</strong>
+      </div>
+
+      <div class="footer-mid">
+        <span class="contact-item">
+          <img class="icon" src="image/email.png" alt="Email icon">
+          <a class="footer-link" href="mailto:Sapori.DItalia@gmail.com">
+            Sapori.DItalia@gmail.com
+          </a>
+        </span>
+
+        <span class="contact-item">
+          <img class="icon" src="image/phone.png" alt="Phone icon">
+          <a class="footer-link" href="tel:+966556678127">
+            +966 556678127
+          </a>
+        </span>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026
+        <a class="footer-link" href="index.html">Sapori D&#39;Italia</a>.
+        All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
