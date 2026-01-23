@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Recipes - Sapori d'Italia</title>
+  <link rel="stylesheet" href="styleRecipes.css" />
+</head>
+
+<body> 
+<header class="header">
+  <div class="header-left">
+    <div class="logo">
+      <img src="image/logo.png" alt="Sapori D'Italia">
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="userPage.html" class="nav-link active">Recipes</a>
+  </nav>
+
+  <div class="header-right">
+    <button id="logoutBtn" class="btn btn-small btn-wideish">Log out</button>
+  </div>
+</header>
+
+
+  <div class="page">
+
+    <header class="topbar">
+      <h1>My Recipes</h1>
+      <a class="add-link" href="addRecipe.html">Add New Recipe</a>
+    </header>
+
+    <main class="content">
+      <section class="table-card" aria-label="My recipes table">
+        <table class="recipes-table">
+          <thead>
+            <tr>
+              <th>Recipe</th>
+              <th>Ingredients</th>
+              <th>Instructions</th>
+              <th>Video</th>
+              <th>Likes</th>
+              <th class="actions-col"></th>
+              <th class="actions-col"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- Row 1 -->
+            <tr>
+              <td class="recipe-cell">
+                <div class="recipe-name">Margherita Pizza</div>
+                <img class="recipe-img" src="images/MargheritaPizza.JPEG" alt="Margherita Pizza">
+              </td>
+
+              <td>
+                Flour, yeast, water,<br />
+                tomato sauce,<br />
+                mozzarella cheese, basil
+              </td>
+
+              <td>
+                Prepare the dough, spread sauce,<br />
+                add mozzarella, bake,<br />
+                garnish with basil.
+              </td>
+
+              <td class="video-cell">
+                <a class="video-link" href="#" target="_blank" rel="noreferrer">video</a>
+              </td>
+
+              <td class="likes-cell">45</td>
+
+              <td class="action-cell">
+                <a class="action-link edit" href="editRecipe.html">edit</a>
+              </td>
+
+              <td class="action-cell">
+                <a class="action-link delete" href="myRecipe.html">delete</a>
+              </td>
+            </tr>
+
+            <!-- Row 2 -->
+            <tr>
+              <td class="recipe-cell">
+                <div class="recipe-name">Spaghetti Carbonara</div>
+                <img class="recipe-img" src="images/SpaghettiCarbonara.JPG" alt="Spaghetti Carbonara">
+              </td>
+
+              <td>
+                Spaghetti, eggs,<br />
+                parmesan cheese,<br />
+                beef bacon, black pepper
+              </td>
+
+              <td>
+                Boil pasta, cook beef bacon,<br />
+                mix eggs + cheese,<br />
+                combine gently.
+              </td>
+
+              <td class="video-cell">
+                <a class="video-link" href="#" target="_blank" rel="noreferrer">video</a>
+              </td>
+
+              <td class="likes-cell">62</td>
+
+              <td class="action-cell">
+                <a class="action-link edit" href="editRecipe.html">edit</a>
+              </td>
+
+              <td class="action-cell">
+                <a class="action-link delete" href="myRecipe.html">delete</a>
+              </td>
+            </tr>
+
+            <!-- Row 3 -->
+            <tr>
+              <td class="recipe-cell">
+                <div class="recipe-name">Lasagna</div>
+                <img class="recipe-img" src="images/lasagna.JPG" alt="Lasagna">
+              </td>
+
+              <td>
+                Lasagna sheets, minced meat,<br />
+                tomato sauce, béchamel sauce,<br />
+                mozzarella
+              </td>
+
+              <td>
+                Cook meat with sauce,<br />
+                layer pasta/sauce/béchamel,<br />
+                bake until golden.
+              </td>
+
+              <td class="video-cell">
+                <a class="video-link" href="#" target="_blank" rel="noreferrer">video</a>
+              </td>
+
+              <td class="likes-cell">38</td>
+
+              <td class="action-cell">
+                <a class="action-link edit" href="editRecipe.html">edit</a>
+              </td>
+
+              <td class="action-cell">
+                <a class="action-link delete" href="myRecipe.html">delete</a>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+   <header class="main-header">...</header>
+
+ 
+</div>
+
+ <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>Contact Us:</strong>
+      </div>
+
+      <div class="footer-mid">
+        <span class="contact-item">
+          <img class="icon" src="image/email.png" alt="Email icon">
+          <a class="footer-link" href="mailto:Sapori.DItalia@gmail.com">
+            Sapori.DItalia@gmail.com
+          </a>
+        </span>
+
+        <span class="contact-item">
+          <img class="icon" src="image/phone.png" alt="Phone icon">
+          <a class="footer-link" href="tel:+966556678127">
+            +966 556678127
+          </a>
+        </span>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026
+        <a class="footer-link" href="index.html">Sapori D&#39;Italia</a>.
+        All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+
+
+ 
+</body>
+</html>
