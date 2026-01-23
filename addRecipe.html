@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add New Recipe - Sapori d'Italia</title>
+
+   
+  <link rel="stylesheet" href="styleRecipes.css" />
+ 
+</head>
+
+<body>
+<header class="header">
+  <div class="header-left">
+    <div class="logo">
+      <img src="image/logo.png" alt="Sapori D'Italia">
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="userPage.html" class="nav-link active">Recipes</a>
+  </nav>
+
+  <div class="header-right">
+    <button id="logoutBtn" class="btn btn-small btn-wideish">Log out</button>
+  </div>
+</header>
+
+
+  <div class="page">
+
+    <header class="topbar">
+      <h1>Add New Recipe</h1>
+      <a class="add-link" href="myRecipe.html">Back to My Recipes</a>
+    </header>
+
+    <main class="content">
+      <section class="form-card" aria-label="Add new recipe form">
+
+        <form id="addRecipeForm" novalidate>
+
+          <!-- Name -->
+          <div class="row">
+            <label for="recipeName">Name:</label>
+            <input id="recipeName" name="recipeName" type="text" required />
+          </div>
+
+          <!-- Category -->
+          <div class="row">
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+              <option value="" selected disabled>Select</option>
+              <option value="breakfast">breakfast</option>
+              <option value="snack">snack</option>
+              <option value="lunch">lunch</option>
+              <option value="dinner">dinner</option>
+            </select>
+          </div>
+
+          <!-- Description -->
+          <div class="row">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="3" required></textarea>
+          </div>
+
+          <!-- Upload Photo (Required in Phase 1 UI) -->
+          <div class="row">
+            <label for="photo">Upload Recipe Photo:</label>
+            <input id="photo" name="photo" type="file" accept="image/*" required />
+            
+          </div>
+
+          <!-- Ingredients -->
+          <fieldset class="block">
+            <legend>Ingredients:</legend>
+
+            <div id="ingredientsWrap" class="stack">
+              <div class="inline" data-ingredient>
+                <span class="small-label">Ingredient 1:</span>
+
+                <label class="mini" for="ingName1">Name:</label>
+                <input id="ingName1" type="text" required />
+
+                <label class="mini" for="ingQty1">Quantity:</label>
+                <input id="ingQty1" type="text" required />
+              </div>
+            </div>
+
+            <button type="button" class="plus-btn" id="addIngredientBtn">+ Add another ingredient</button>
+          </fieldset>
+
+          <!-- Instructions -->
+          <fieldset class="block">
+            <legend>Instructions:</legend>
+
+            <div id="stepsWrap" class="stack">
+              <div class="inline" data-step>
+                <span class="small-label">Step 1:</span>
+                <input type="text" required />
+              </div>
+            </div>
+
+            <button type="button" class="plus-btn" id="addStepBtn">+ Add another step</button>
+          </fieldset>
+
+          <!-- Video -->
+          <fieldset class="block">
+            <legend>Upload Video or URL: <span class="optional">(optional)</span></legend>
+
+            <div class="row">
+              <label for="videoFile">Video File:</label>
+              <input id="videoFile" name="videoFile" type="file" accept="video/*" />
+            </div>
+
+            <div class="row">
+              <label for="videoUrl">Video URL:</label>
+              <input id="videoUrl" name="videoUrl" type="url" placeholder="https://..." />
+            </div>
+
+            <p class="hint">If you do not add a video, it will be saved as <b>No video</b>.</p>
+          </fieldset>
+
+          <div class="actions">
+            <button type="submit" class="primary">Add Recipe</button>
+          </div>
+
+          <p id="errorBox" class="error" aria-live="polite"></p>
+        </form>
+
+      </section>
+    </main>
+
+    <header class="main-header">...</header>
+
+ 
+</div>
+
+<footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>Contact Us:</strong>
+      </div>
+
+      <div class="footer-mid">
+        <span class="contact-item">
+          <img class="icon" src="image/email.png" alt="Email icon">
+          <a class="footer-link" href="mailto:Sapori.DItalia@gmail.com">
+            Sapori.DItalia@gmail.com
+          </a>
+        </span>
+
+        <span class="contact-item">
+          <img class="icon" src="image/phone.png" alt="Phone icon">
+          <a class="footer-link" href="tel:+966556678127">
+            +966 556678127
+          </a>
+        </span>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026
+        <a class="footer-link" href="index.html">Sapori D&#39;Italia</a>.
+        All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+
+  
+  
+<script src="addRecipe.js"></script>
+</body>
+</html>
