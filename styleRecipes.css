@@ -1,0 +1,322 @@
+:root{
+  --bg: #ffffff;
+  --paper: #ffffff;
+  --ink: #1a1a1a;
+  --muted: #666;
+
+  --border: #bdbdbd;
+  --soft-bg: #fdfaf3;
+}
+
+ 
+*{ box-sizing: border-box; }
+
+ 
+body{
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* PAGE WRAPPER   */
+.page{
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 52px 18px;
+  background: var(--paper);
+}
+
+ .header{
+  width: 100%;
+  background: var(--soft-bg);
+  border-bottom: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+}
+
+/* Left (logo) */
+.header-left{
+  display: flex;
+  align-items: center;
+}
+
+.logo img{
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #d7d7d7;
+  background: #eeeeee;
+}
+
+/* Navigation */
+.nav{
+  display: flex;
+  gap: 34px;
+  align-items: center;
+}
+
+.nav-link{
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.nav-link.active{
+  font-weight: 800;
+}
+
+/* Right (logout) */
+.header-right{
+  display: flex;
+  align-items: center;
+}
+
+/* Buttons (shared) */
+.btn{
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  border: 2px solid var(--border);
+  background: var(--soft-bg);
+  cursor: pointer;
+}
+
+.btn-small{
+  height: 42px;
+  font-size: 15px;
+  padding: 0 16px;
+  border-radius: 8px;
+}
+
+.btn-wideish{
+  min-width: 110px;
+}
+
+/*  TOP BAR  */
+.topbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 26px;
+}
+
+.topbar h1{
+  font-size: 42px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.add-link{
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+/*  TABLE  */
+.table-card{
+  border: 2px solid var(--border);
+}
+
+.recipes-table{
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.recipes-table th,
+.recipes-table td{
+  border: 2px solid var(--border);
+  padding: 16px;
+  font-size: 15px;
+  vertical-align: top;
+}
+
+.recipes-table th{
+  text-align: center;
+  font-weight: 700;
+}
+
+.recipe-name{
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.recipe-img{
+  max-width: 150px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid #d7d7d7;
+  background: #eeeeee;
+}
+
+/*   FORMS   */
+.form-card{
+  max-width: 560px;
+  margin: 0 auto;
+  border: 2px solid var(--border);
+  padding: 26px 22px 30px;
+}
+
+.row{
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+label{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea{
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  background: #f2f2f2;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.section-title{
+  font-size: 18px;
+  font-weight: 700;
+  margin: 24px 0 12px;
+}
+
+.group{
+  border: 2px solid var(--border);
+  padding: 18px;
+}
+
+/* Buttons in forms */
+.plus-btn,
+.submit-btn,
+.primary{
+  height: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  background: var(--soft-bg);
+  cursor: pointer;
+}
+
+.actions{
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+/* Edit page image */
+.current-box{
+  border: 2px solid var(--border);
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#currentPhotoImg{
+  max-width: 240px;
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  background: #eeeeee;
+}
+
+/*  FOOTER (NEW STRUCTURE)  */
+.footer{
+  background: var(--soft-bg);
+  border-top: 2px solid var(--border);
+  padding: 26px 18px 34px;
+}
+
+.footer-inner{
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* "Contact Us" title */
+.footer-left{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Middle contact row */
+.footer-mid{
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* Each contact item */
+.contact-item{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+/* Icons */
+.icon{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Footer links */
+.footer-link{
+  color: var(--ink);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Bottom copyright */
+.footer-bottom{
+  font-size: 16px;
+}
+
+/*  RESPONSIVE   */
+@media (max-width: 720px){
+  .row{
+    grid-template-columns: 1fr;
+  }
+
+  .header{
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .topbar{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .topbar h1{
+    font-size: 34px;
+  }
+
+  .logo img{
+    max-width: 220px;
+  }
+
+  .footer-mid{
+    gap: 20px;
+  }
+}
