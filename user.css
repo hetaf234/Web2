@@ -1,0 +1,445 @@
+/* =========================
+   RESET + BASE
+========================= */
+* { box-sizing: border-box; }
+
+body{
+  margin:0;
+  font-family: Georgia, "Times New Roman", serif;
+  background:#fff;
+  color:#1a1a1a;
+}
+
+button, input, textarea, select{
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* =========================
+   LINKS (hover only)
+========================= */
+a{
+  color:#1a73e8;
+  text-decoration:none;
+}
+a:hover{
+  color:#0b57d0;
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+}
+
+/* footer links stay black */
+.footer a,
+.footer a:hover{
+  color:#1a1a1a;
+  text-decoration:underline;
+}
+
+/* =========================
+   MAIN LAYOUT (Home/Login/Signup)
+========================= */
+.main{
+  min-height: calc(100vh - 180px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:60px 20px;
+}
+
+.card{
+  text-align:center;
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1{
+  font-size:48px;
+  margin:0 0 10px;
+  font-weight:700;
+}
+
+.subtitle{
+  font-size:14px;
+  margin:0 0 25px;
+}
+
+/* =========================
+   LOGO (no border)
+========================= */
+.logo{
+  width:100%;
+  max-width:420px;
+  margin:0 auto 25px;
+  display:flex;
+  justify-content:center;
+}
+
+.logo img{
+  width:100%;
+  max-width:420px;
+  height:auto;
+  display:block;
+  border:none;
+  background:none;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  text-decoration:none;
+  color:#1a1a1a;
+
+  border:2px solid #bdbdbd;
+  border-radius:8px;
+
+  height:56px;
+  font-size:20px;
+
+  background:#fdfaf3;
+  padding:0 18px;
+  cursor:pointer;
+}
+.btn:hover{ background:#f7f3e8; }
+
+.btn-wide{ width:min(420px,90%); }
+
+/* small buttons (logout/filter) */
+.btn-small{
+  height:42px;
+  font-size:16px;
+  padding:0 14px;
+}
+
+.btn-wideish{ width:180px; }
+.btn-filter{ width:160px; }
+
+/* =========================
+   FOOTER
+========================= */
+.footer{
+  background:#fdfaf3;
+  border-top:2px solid #bdbdbd;
+  padding:24px 20px 40px;
+}
+
+.footer-inner{ max-width:1100px; margin:0 auto; }
+
+.footer-left{
+  font-size:22px;
+  margin:0 0 16px;
+  text-align:center;
+}
+
+.footer-mid{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+.contact-item{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size:14px;
+}
+
+.icon{
+  width:22px;
+  height:22px;
+  display:inline-block;
+  object-fit:contain;
+}
+
+.footer-bottom{
+  text-align:center;
+  font-size:18px;
+}
+
+/* =========================
+   FORMS (Login + Sign up)
+========================= */
+.login-form,
+.auth-form{
+  max-width:700px;
+  margin:0 auto;
+  text-align:left;
+}
+
+.login-form fieldset,
+.auth-form fieldset{
+  border:2px solid #bdbdbd;
+  padding:30px 25px 35px;
+}
+
+.login-form legend,
+.auth-form legend{
+  font-size:36px;
+  padding:0 10px;
+  font-weight:700;
+  text-align:center;
+}
+
+.login-form label,
+.auth-form label{
+  display:block;
+  font-size:18px;
+  margin:18px 0 8px;
+}
+
+.login-form input,
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"]{
+  width:100%;
+  padding:12px;
+  border:none;
+  background:#f2f2f2;
+  font-size:16px;
+}
+
+/* Login buttons stacked centered */
+.login-form .btn,
+.login-form button{
+  display:block;
+  width:min(420px,90%);
+  margin:14px auto 0;
+}
+
+/* =========================
+   SIGN UP: Choose Image (label button)
+========================= */
+.auth-form input[type="file"]{ display:none; }
+
+.profile-row{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  margin:12px 0 18px;
+}
+
+.file-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  height:42px;
+  min-width:160px;
+
+  padding:0 16px;
+  border:2px solid #bdbdbd;
+  border-radius:8px;
+
+  background:#e6e6e6;
+  cursor:pointer;
+
+  font-size:16px;
+  color:#1a1a1a;
+}
+.file-btn:hover{ background:#dcdcdc; }
+
+.profile-preview{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:2px solid #bdbdbd;
+  object-fit:cover;
+  background:#eeeeee;
+  display:block;
+}
+
+/* Sign up buttons stacked centered */
+.auth-form .btn,
+.auth-form button{
+  display:block;
+  width:min(420px,90%);
+  margin:14px auto 0;
+}
+
+/* =========================
+   USER PAGE
+========================= */
+.user-page .main{
+  align-items:flex-start;
+  padding-top:30px;
+}
+
+/* Header same color as footer */
+.user-page .header{
+  background:#fdfaf3;
+  border-bottom:2px solid #bdbdbd;
+  padding:14px 20px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.user-page .header .logo{
+  max-width:180px;
+  margin:0;
+  justify-content:flex-start;
+}
+.user-page .header .logo img{ max-width:180px; }
+
+/* Make logout button nice */
+.user-page #logoutBtn{
+  height:42px;
+  width:180px;
+  font-size:16px;
+}
+
+/* Layout */
+.user-page .layout{
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+  margin-top:18px;
+  text-align:left;
+}
+
+/* Left info */
+.user-page .info-box{
+  width:280px;
+  border:2px solid #bdbdbd;
+  border-radius:10px;
+  padding:16px;
+  background:#fff;
+}
+
+.user-page .info-box img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  border:2px solid #bdbdbd;
+  object-fit:cover;
+  background:#eeeeee;
+  display:block;
+  margin:10px auto 12px;
+}
+
+.user-page .info-box p{
+  margin:8px 0;
+  text-align:center;
+}
+
+/* My Recipes as link */
+.user-page .info-box h3{
+  font-size:14px;
+  text-align:center;
+  margin:12px 0 10px;
+  color:#1a73e8;
+  font-weight:normal;
+  cursor:pointer;
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+}
+.user-page .info-box h3:hover{ color:#0b57d0; }
+
+/* Right recipes */
+.user-page .recipes-box{
+  flex:1;
+  border:2px solid #bdbdbd;
+  border-radius:10px;
+  padding:16px;
+  background:#fff;
+}
+
+/* Filter row */
+.user-page .filter-row{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  margin-bottom:12px;
+  align-items:center;
+}
+
+.user-page .category-select{
+  height:42px;
+  font-size:15px;
+  padding:0 10px;
+  border:2px solid #bdbdbd;
+  border-radius:8px;
+  background:#f2f2f2;
+  width:220px;
+}
+
+/* Tables */
+.user-page .table{
+  width:100%;
+  border-collapse:collapse;
+  text-align:left;
+}
+
+.user-page .table th,
+.user-page .table td{
+  border:2px solid #bdbdbd;
+  padding:12px;
+  vertical-align:middle;
+  font-size:14px;
+}
+
+.user-page .table th{
+  background:#fdfaf3;
+  font-weight:700;
+}
+
+.user-page .table img{
+  width:70px;
+  height:50px;
+  object-fit:cover;
+  border:1px solid #d7d7d7;
+  border-radius:6px;
+  display:block;
+}
+
+/* Favourites box */
+.user-page .favourites-box{
+  margin-top:18px;
+  border:2px solid #bdbdbd;
+  border-radius:10px;
+  padding:16px;
+  background:#fff;
+  text-align:left;
+}
+
+/* Heart */
+.user-page .heart{
+  font-size:22px;
+  line-height:1;
+  color:#777;
+  cursor:pointer;
+  user-select:none;
+}
+.user-page .heart.active{ color:#e11d48; }
+.user-page .heart:active{ color:#e11d48; }
+
+/* Remove link */
+.user-page .remove-link{
+  color:#1a73e8;
+  text-decoration:none;
+}
+.user-page .remove-link:hover{
+  color:#0b57d0;
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .user-page .layout{ flex-direction:column; }
+  .user-page .info-box{ width:100%; }
+  .user-page .filter-row{ justify-content:flex-start; flex-wrap:wrap; }
+  .user-page .category-select{ width:min(420px,100%); }
+}
