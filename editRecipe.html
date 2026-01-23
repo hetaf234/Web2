@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Recipe - Sapori d'Italia</title>
+
+  <link rel="stylesheet" href="styleRecipes.css" />
+</head>
+
+<body>
+<header class="header">
+  <div class="header-left">
+    <div class="logo">
+      <img src="image/logo.png" alt="Sapori D'Italia">
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="userPage.html" class="nav-link active">Recipes</a>
+  </nav>
+
+  <div class="header-right">
+    <button id="logoutBtn" class="btn btn-small btn-wideish">Log out</button>
+  </div>
+</header>
+
+
+  <div class="page">
+
+    <header class="topbar">
+      <h1>Edit Recipe</h1>
+      <a class="add-link" href="myRecipe.html">Back to My Recipes</a>
+    </header>
+
+    <main class="content">
+      <section class="form-card" aria-label="Edit recipe form">
+        <form id="editRecipeForm" novalidate>
+
+          <!-- Name -->
+          <div class="row">
+            <label for="recipeName">Name:</label>
+            <input id="recipeName" name="recipeName" type="text" required value="Margherita Pizza" />
+          </div>
+
+          <!-- Category -->
+          <div class="row">
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+              <option value="" disabled>Select</option>
+              <option value="breakfast">breakfast</option>
+              <option value="snack">snack</option>
+              <option value="lunch">lunch</option>
+              <option value="dinner">dinner</option>
+            </select>
+          </div>
+
+          <!-- Description -->
+          <div class="row">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required>Classic Italian pizza with tomato sauce, mozzarella, and fresh basil.</textarea>
+          </div>
+
+          <!-- Photo + Current Photo -->
+          <div class="row photo-row">
+            <div class="left">
+              <label for="photo">Upload Recipe Photo:</label>
+              <input id="photo" name="photo" type="file" accept="image/*" />
+              <p class="hint">Leave it empty to keep the current photo.</p>
+            </div>
+
+            <div class="right">
+              <div class="current-title">Current Photo:</div>
+              <div class="current-box">
+                <!-- ثابت: نفس طريقتك السابقة images/ -->
+                <img id="currentPhotoImg" src="images/MargheritaPizza.JPEG" alt="Current photo" />
+                <div id="noPhotoText" class="no-current" style="display:none;">No photo</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ingredients -->
+          <div class="section-title">Ingredients:</div>
+
+          <div id="ingredientsWrap" class="group">
+            <div class="ingredient-line">
+              <span class="mini-label">Ingredient 1:</span>
+              <label class="inline-label">Name:</label>
+              <input class="ing-name" type="text" required value="Flour" />
+              <label class="inline-label">Quantity:</label>
+              <input class="ing-qty" type="text" required value="2 cups" />
+            </div>
+
+            <div class="ingredient-line">
+              <span class="mini-label">Ingredient 2:</span>
+              <label class="inline-label">Name:</label>
+              <input class="ing-name" type="text" required value="Yeast" />
+              <label class="inline-label">Quantity:</label>
+              <input class="ing-qty" type="text" required value="1 tsp" />
+            </div>
+
+            <div class="ingredient-line">
+              <span class="mini-label">Ingredient 3:</span>
+              <label class="inline-label">Name:</label>
+              <input class="ing-name" type="text" required value="Water" />
+              <label class="inline-label">Quantity:</label>
+              <input class="ing-qty" type="text" required value="3/4 cup" />
+            </div>
+
+            <div class="ingredient-line">
+              <span class="mini-label">Ingredient 4:</span>
+              <label class="inline-label">Name:</label>
+              <input class="ing-name" type="text" required value="Tomato sauce" />
+              <label class="inline-label">Quantity:</label>
+              <input class="ing-qty" type="text" required value="1/2 cup" />
+            </div>
+
+            <div class="ingredient-line">
+              <span class="mini-label">Ingredient 5:</span>
+              <label class="inline-label">Name:</label>
+              <input class="ing-name" type="text" required value="Mozzarella" />
+              <label class="inline-label">Quantity:</label>
+              <input class="ing-qty" type="text" required value="200 g" />
+            </div>
+
+            <div class="ingredient-line">
+              <span class="mini-label">Ingredient 6:</span>
+              <label class="inline-label">Name:</label>
+              <input class="ing-name" type="text" required value="Fresh basil" />
+              <label class="inline-label">Quantity:</label>
+              <input class="ing-qty" type="text" required value="A few leaves" />
+            </div>
+          </div>
+
+          <button type="button" id="addIngredientBtn" class="plus-btn">+ Add another ingredient</button>
+
+          <!-- Instructions -->
+          <div class="section-title">Instructions:</div>
+
+          <div id="stepsWrap" class="group">
+            <div class="step-line">
+              <span class="mini-label">Step 1:</span>
+              <input class="step-text" type="text" required value="Prepare the dough and let it rise." />
+            </div>
+
+            <div class="step-line">
+              <span class="mini-label">Step 2:</span>
+              <input class="step-text" type="text" required value="Spread tomato sauce over the dough." />
+            </div>
+
+            <div class="step-line">
+              <span class="mini-label">Step 3:</span>
+              <input class="step-text" type="text" required value="Add mozzarella and bake until golden." />
+            </div>
+
+            <div class="step-line">
+              <span class="mini-label">Step 4:</span>
+              <input class="step-text" type="text" required value="Garnish with fresh basil and serve." />
+            </div>
+          </div>
+
+          <button type="button" id="addStepBtn" class="plus-btn">+ Add another step</button>
+
+          <!-- Video -->
+          <div class="section-title">Video or URL (optional):</div>
+
+          <div class="row video-row">
+            <div class="left">
+              <label for="videoFile">Video File:</label>
+              <input id="videoFile" type="file" accept="video/*" />
+
+              <label for="videoUrl" class="mt">Video URL:</label>
+              <input id="videoUrl" type="url" placeholder="https://..." value="No video" />
+
+              <p class="hint">Video is optional. If you leave it empty, it will be No video.</p>
+            </div>
+
+            <div class="right">
+              <div class="current-title">Current Video:</div>
+              <div class="current-box video-current">
+                <div id="currentVideoText" class="no-current">No video</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="actions">
+            <button type="submit" class="submit-btn">Update Recipe</button>
+          </div>
+
+          <p id="formError" class="error" aria-live="polite"></p>
+          <p id="formSuccess" class="success" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+   <header class="main-header">...</header>
+
+ 
+</div>
+
+<footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>Contact Us:</strong>
+      </div>
+
+      <div class="footer-mid">
+        <span class="contact-item">
+          <img class="icon" src="image/email.png" alt="Email icon">
+          <a class="footer-link" href="mailto:Sapori.DItalia@gmail.com">
+            Sapori.DItalia@gmail.com
+          </a>
+        </span>
+
+        <span class="contact-item">
+          <img class="icon" src="image/phone.png" alt="Phone icon">
+          <a class="footer-link" href="tel:+966556678127">
+            +966 556678127
+          </a>
+        </span>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026
+        <a class="footer-link" href="index.html">Sapori D&#39;Italia</a>.
+        All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+
+ 
+
+  <script src="editRecipe.js"></script>
+</body>
+</html>
+
+ 
