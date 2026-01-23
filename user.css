@@ -443,3 +443,19 @@ h1{
   .user-page .filter-row{ justify-content:flex-start; flex-wrap:wrap; }
   .user-page .category-select{ width:min(420px,100%); }
 }
+/* ===== Align Favourite table with Recipes table (CSS ONLY) ===== */
+
+/* نفس عرض بوكس الريسبيز */
+.user-page .favourites-box{
+  width: calc(100% - 280px - 18px);   /* 280 = info-box , 18 = gap */
+  margin-left: calc(280px + 18px);    /* يبدأ بعد info-box */
+  margin-top: 18px;
+}
+
+/* لو الصفحة صارت عمودية بالموبايل */
+@media (max-width:900px){
+  .user-page .favourites-box{
+    width: 100%;
+    margin-left: 0;
+  }
+}
