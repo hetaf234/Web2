@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Page - Sapori d'Italia</title>
+  <link rel="stylesheet" href="styleAdminView.css" />
+</head>
+
+<body>
+
+  <!-- Header (SAME AS YOU PROVIDED) -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">
+        <img src="images/logo.JPG" alt="Sapori D'Italia">
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="userPage.html" class="nav-link active">Recipes</a>
+    </nav>
+
+    <div class="header-right">
+      <button id="logoutBtn" class="btn btn-small btn-wideish">Log out</button>
+    </div>
+  </header>
+
+  <div class="page">
+
+    <header class="topbar">
+      <h1>Welcome Admin One</h1>
+
+      <!-- Spec says sign-out link leads to Homepage -->
+      <a class="add-link" href="index.html">Log-out</a>
+    </header>
+
+    <!-- My Information -->
+    <section class="card" aria-label="My Information">
+      <h2 class="section-h">My Information</h2>
+
+      <div class="info-box">
+        <div class="info-row">
+          <div class="info-label">Name</div>
+          <div class="info-value">Admin One</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">Email Address</div>
+          <div class="info-value">admin@sapori.com</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reported Recipes -->
+    <section class="card" aria-label="Reported Recipes">
+      <h2 class="section-h">Reported Recipes</h2>
+
+      <div class="table-card">
+        <table class="recipes-table admin-table">
+          <thead>
+            <tr>
+              <th>Recipe Name</th>
+              <th>Recipe Creator</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>
+                <!-- Required: recipe name is a link to View Recipe -->
+                <a class="recipe-link" href="viewRecipe.html">Low-carb Strawberry Cheesecake</a>
+              </td>
+
+              <td>
+                <div class="creator small">
+                  <img class="avatar" src="images/icon.png" alt="Creator photo">
+                  <div class="creator-info">
+                    <div class="creator-name">Lina</div>
+                    <div class="creator-sub muted">Recipe Creator</div>
+                  </div>
+                </div>
+              </td>
+
+              <td>
+                <!-- UI only in Phase 1 -->
+                <form class="action-form" action="adminPage.html" method="get">
+                  <div class="radio-col">
+                    <label class="radio-item">
+                      <input type="radio" name="adminAction1" value="block" />
+                      Block User
+                    </label>
+                    <label class="radio-item">
+                      <input type="radio" name="adminAction1" value="dismiss" />
+                      Dismiss Report
+                    </label>
+                  </div>
+
+                  <button class="btn btn-small" type="submit">Submit</button>
+                </form>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a class="recipe-link" href="viewRecipe.html">Margherita Pizza</a>
+              </td>
+
+              <td>
+                <div class="creator small">
+                  <img class="avatar" src="images/icon.png" alt="Creator photo">
+                  <div class="creator-info">
+                    <div class="creator-name">Giulia Rossi</div>
+                    <div class="creator-sub muted">Recipe Creator</div>
+                  </div>
+                </div>
+              </td>
+
+              <td>
+                <form class="action-form" action="adminPage.html" method="get">
+                  <div class="radio-col">
+                    <label class="radio-item">
+                      <input type="radio" name="adminAction2" value="block" />
+                      Block User
+                    </label>
+                    <label class="radio-item">
+                      <input type="radio" name="adminAction2" value="dismiss" />
+                      Dismiss Report
+                    </label>
+                  </div>
+
+                  <button class="btn btn-small" type="submit">Submit</button>
+                </form>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Blocked User List -->
+    <section class="card" aria-label="Blocked User List">
+      <h2 class="section-h">Blocked User List</h2>
+
+      <div class="table-card">
+        <table class="recipes-table admin-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email Address</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Omar Al-Qahtani</td>
+              <td>omar.blocked@sapori.com</td>
+            </tr>
+            <tr>
+              <td>Hind Alharbi</td>
+              <td>hind.blocked@sapori.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+ <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>Contact Us:</strong>
+      </div>
+
+      <div class="footer-mid">
+        <span class="contact-item">
+          <img class="icon" src="images/email.png" alt="Email icon" />
+          <a class="footer-link" href="mailto:Sapori.DItalia@gmail.com">Sapori.DItalia@gmail.com</a>
+        </span>
+
+        <span class="contact-item">
+           <img class="icon" src="images/phone.png" alt="Phone icon" />
+          <a class="footer-link" href="tel:+966556678127">+966 556678127</a>
+        </span>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 <a class="footer-link" href="index.html">Sapori D&#39;Italia</a>. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
