@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sapori D'Italia - Login</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -16,38 +16,30 @@
         <img src="image/logo.png" alt="Sapori D&#39;Italia logo">
       </div>
 
-      <form class="login-form">
+      <form class="login-form" action="/login" method="POST">
         <fieldset>
           <legend>Login</legend>
 
           <label for="email">Email Address:</label>
-          <input
-            id="email"
-            type="email"
-            placeholder="Type your email"
-          >
+          <input id="email" name="email" type="email" placeholder="Type your email" required>
 
           <label for="password">Password:</label>
-          <input
-            id="password"
-            type="password"
-            placeholder="Type your password"
-          >
-
-         <button class="btn btn-wide" type="submit">
+          <input id="password" name="password" type="password" placeholder="Type your password" required>
+		  
+		  
+		  
+         <button class="btn btn-wide" type="button" onclick="location.href='adminPage.html'">
   Login (Admin)
 </button>
 
-<button class="btn btn-wide" type="submit">
+<button class="btn btn-wide" type="button" onclick="location.href='userPage.html'">
   Login (Regular User)
 </button>
 
-<button
-  class="btn btn-wide"
-  type="button"
-  onclick="window.location.href='index.html'">
-  Back
-</button>
+
+		<button class="btn btn-wide" type="button" onclick="window.location.href='index.html'">
+			Back
+		</button>
 
 
 
