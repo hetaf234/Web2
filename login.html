@@ -27,14 +27,30 @@
           <input id="password" name="password" type="password" placeholder="Type your password" required>
 		  
 		  
-		  
-         <button class="btn btn-wide" type="button" onclick="location.href='adminPage.html'">
-  Login (Admin)
-</button>
+		  <button class="btn btn-wide" type="submit" data-go="adminPage.html">
+			Login (Admin)
+			</button>
 
-<button class="btn btn-wide" type="button" onclick="location.href='userPage.html'">
-  Login (Regular User)
-</button>
+			<button class="btn btn-wide" type="submit" data-go="userPage.html">
+				Login (Regular User)
+			</button>
+
+		  <!--should i check if they have wrote mail and password-->
+		  <!--
+         <button class="btn btn-wide" type="button" onclick="location.href='adminPage.html'">
+			Login (Admin)
+		</button>
+
+		<button class="btn btn-wide" type="button" onclick="location.href='userPage.html'">
+			Login (Regular User)
+		</button>
+		-->
+
+
+
+
+
+
 
 
 		<button class="btn btn-wide" type="button" onclick="window.location.href='index.html'">
@@ -72,6 +88,46 @@
       </div>
     </div>
   </footer>
+
+
+
+
+
+
+
+
+
+
+<script>
+  const form = document.querySelector(".login-form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // stop normal submit
+
+    if (!form.checkValidity()) {
+      form.reportValidity(); // show browser errors
+      return;
+    }
+
+    const target = document.activeElement.dataset.go;
+    if (target) {
+      window.location.href = target;
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
