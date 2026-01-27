@@ -110,3 +110,12 @@ form.addEventListener("submit", (e) => {
   //  If everything is valid → go to My Recipes
   window.location.href = "myRecipe.html";
 });
+document.addEventListener("DOMContentLoaded", function () {
+  var logoutBtn = document.getElementById("logoutBtn");
+
+  if (logoutBtn !== null) {
+    logoutBtn.onclick = function () {
+      window.location.href = "login.html";
+    };
+  }
+});
