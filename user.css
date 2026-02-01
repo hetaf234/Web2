@@ -10,13 +10,6 @@ body{
   color:#1a1a1a;
 }
 
-button, input, textarea, select{
-  font-family: Georgia, "Times New Roman", serif;
-}
-
-/* =========================
-   LINKS (hover only)
-========================= */
 a{
   color:#1a73e8;
   text-decoration:none;
@@ -27,65 +20,6 @@ a:hover{
   text-decoration-thickness:2px;
 }
 
-/* footer links stay black */
-.footer a,
-.footer a:hover{
-  color:#1a1a1a;
-  text-decoration:underline;
-}
-
-/* =========================
-   MAIN LAYOUT (Home/Login/Signup)
-========================= */
-.main{
-  min-height: calc(100vh - 180px);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:60px 20px;
-}
-
-.card{
-  text-align:center;
-  width:100%;
-  max-width:1100px;
-  margin:0 auto;
-}
-
-/* =========================
-   HEADINGS
-========================= */
-h1{
-  font-size:48px;
-  margin:0 0 10px;
-  font-weight:700;
-}
-
-.subtitle{
-  font-size:14px;
-  margin:0 0 25px;
-}
-
-/* =========================
-   LOGO (no border)
-========================= */
-.logo{
-  width:100%;
-  max-width:420px;
-  margin:0 auto 25px;
-  display:flex;
-  justify-content:center;
-}
-
-.logo img{
-  width:100%;
-  max-width:420px;
-  height:auto;
-  display:block;
-  border:none;
-  background:none;
-}
-
 /* =========================
    BUTTONS
 ========================= */
@@ -93,33 +27,348 @@ h1{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-
-  text-decoration:none;
   color:#1a1a1a;
-
   border:2px solid #bdbdbd;
   border-radius:8px;
-
-  height:56px;
-  font-size:20px;
-
+  height:42px;
+  padding:0 14px;
   background:#fdfaf3;
-  padding:0 18px;
   cursor:pointer;
+  font-size:16px;
 }
 .btn:hover{ background:#f7f3e8; }
+.btn-small{ height:42px; font-size:16px; }
+.btn-wideish{ width:180px; }
 
-.btn-wide{ width:min(420px,90%); }
-
-/* small buttons (logout/filter) */
-.btn-small{
-  height:42px;
-  font-size:16px;
-  padding:0 14px;
+/* =========================
+   HEADER + NAV
+========================= */
+.header{
+  background:#fdfaf3;
+  border-bottom:2px solid #bdbdbd;
+  padding:14px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
 }
 
-.btn-wideish{ width:180px; }
-.btn-filter{ width:160px; }
+.logo{ display:flex; align-items:center; }
+.logo img{ width:80px; height:auto; display:block; }
+
+.nav{
+  display:flex;
+  gap:28px;
+  align-items:center;
+  justify-content:center;
+  flex:1;
+}
+
+.nav-link{
+  color:#1a1a1a;
+  font-size:18px;
+  padding:6px 2px;
+  text-decoration:none;
+}
+.nav-link:hover{
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+}
+.nav-link.active{
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+}
+
+/* =========================
+   PAGE WRAP
+========================= */
+.page{
+  max-width:1100px;
+  margin:0 auto;
+  padding:26px 20px 60px;
+}
+
+.brand{
+  text-align:center;
+  margin:10px 0 22px;
+}
+.brand-title{
+  margin:0;
+  font-size:56px;
+  font-weight:700;
+}
+.brand-sub{
+  margin:6px 0 0;
+  font-size:18px;
+  color:#333;
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+.layout{
+  display:grid;
+  grid-template-columns: 360px 1fr;
+  gap:22px;
+  align-items:start;
+}
+
+/* =========================
+   CARDS
+========================= */
+.card{
+  border:2px solid #bdbdbd;
+  border-radius:12px;
+  background:#fff;
+  padding:14px;
+}
+
+.card-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom:10px;
+}
+
+.card-title{
+  margin:0;
+  font-size:34px;
+  font-weight:700;
+}
+
+.right-col{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/* =========================
+   INFO CARD
+========================= */
+.info-card .card-title{
+  text-align:center;
+}
+
+.profile{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  margin:14px 0 10px;
+}
+
+.avatar{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid #bdbdbd;
+  background:#fdfaf3;
+}
+
+.profile-text{
+  text-align:center;
+}
+.profile-name{
+  font-weight:700;
+  font-size:18px;
+}
+.profile-email{
+  font-size:14px;
+  margin-top:2px;
+}
+
+.info-links{
+  text-align:center;
+  margin:10px 0;
+}
+.info-link{
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+}
+
+.stats{
+  margin-top:14px;
+  text-align:center;
+  line-height:1.9;
+  font-size:16px;
+}
+
+/* =========================
+   FILTERS
+========================= */
+.filters{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.select{
+  height:42px;
+  min-width:140px;
+  border:2px solid #bdbdbd;
+  border-radius:8px;
+  padding:0 12px;
+  background:#e6e6e6;   /* رصاصي مثل طلبك */
+  color:#1a1a1a;
+  font-size:16px;
+}
+
+/* =========================
+   TABLES
+========================= */
+.table-wrap{
+  width:100%;
+  overflow-x:auto;
+}
+
+/* shared table style */
+.recipes-table,
+.fav-table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;          /* يثبت الأعمدة */
+}
+
+.recipes-table th,
+.recipes-table td,
+.fav-table th,
+.fav-table td{
+  border:2px solid #bdbdbd;
+  padding:12px 10px;
+  font-size:16px;
+  vertical-align:middle;       /* مهم للمحاذاة */
+}
+
+.recipes-table th,
+.fav-table th{
+  background:#fdfaf3;
+  font-weight:700;
+  text-align:center;
+}
+
+.center-td{ text-align:center; }
+
+/* column widths for recipes table (6 cols) */
+.recipes-table th:nth-child(1),
+.recipes-table td:nth-child(1){ width:18%; }
+
+.recipes-table th:nth-child(2),
+.recipes-table td:nth-child(2){ width:18%; }
+
+.recipes-table th:nth-child(3),
+.recipes-table td:nth-child(3){ width:22%; } /* Creator أكبر */
+
+.recipes-table th:nth-child(4),
+.recipes-table td:nth-child(4){ width:18%; }
+
+.recipes-table th:nth-child(5),
+.recipes-table td:nth-child(5){ width:12%; }
+
+.recipes-table th:nth-child(6),
+.recipes-table td:nth-child(6){ width:12%; }
+
+/* recipe link black (not blue) */
+.recipe-link{
+  color:#1a1a1a;
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+}
+.recipe-link:hover{ color:#1a1a1a; }
+
+/* photos */
+.photo-td{ text-align:center; }
+.recipe-photo{
+  width:110px;
+  height:80px;
+  object-fit:cover;
+  border-radius:10px;
+  border:1px solid #d7d7d7;
+  display:block;
+  margin:0 auto;
+}
+.recipe-photo.small{
+  width:90px;
+  height:60px;
+}
+
+/* =========================
+   CREATOR COLUMN (THE FIX)
+========================= */
+.creator-td{ text-align:left; }
+
+.creator-box{
+  display:flex !important;
+  align-items:center !important;
+  gap:10px;
+  justify-content:center;   /* خليهم بالنص داخل العمود */
+  width:100%;
+}
+
+.creator-avatar{
+  width:40px !important;
+  height:40px !important;
+  border-radius:50% !important;
+  object-fit:cover !important;
+  border:2px solid #bdbdbd;
+  background:#fdfaf3;
+  flex:0 0 auto;
+  display:block;
+}
+
+.creator-text{
+  line-height:1.2;
+  font-size:18px;
+  word-break:break-word;
+  text-align:left;
+}
+
+/* =========================
+   HEART
+========================= */
+.heart-btn{
+  width:48px;
+  height:48px;
+  border:2px solid #bdbdbd;
+  border-radius:10px;
+  background:#fff;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.heart{
+  font-size:22px;
+  color:#1a1a1a;
+  line-height:1;
+}
+
+.heart-btn.is-active{
+  border-color:#e11d48;
+}
+
+.heart-btn.is-active .heart{
+  color:#e11d48;          /* أحمر */
+}
+
+/* =========================
+   FAV TABLE
+========================= */
+.fav-name{
+  color:#1a1a1a;
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+  text-align:center;
+}
+
+.remove-link{
+  color:#1a73e8;
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+}
+.remove-link:hover{ color:#0b57d0; }
 
 /* =========================
    FOOTER
@@ -128,9 +377,13 @@ h1{
   background:#fdfaf3;
   border-top:2px solid #bdbdbd;
   padding:24px 20px 40px;
+  margin-top:40px;
 }
 
-.footer-inner{ max-width:1100px; margin:0 auto; }
+.footer-inner{
+  max-width:1100px;
+  margin:0 auto;
+}
 
 .footer-left{
   font-size:22px;
@@ -157,8 +410,12 @@ h1{
 .icon{
   width:22px;
   height:22px;
-  display:inline-block;
   object-fit:contain;
+}
+
+.footer-link{
+  color:#1a1a1a;
+  text-decoration:underline;
 }
 
 .footer-bottom{
@@ -167,391 +424,69 @@ h1{
 }
 
 /* =========================
-   FORMS (Login + Sign up)
+   RESPONSIVE
 ========================= */
-.login-form,
-.auth-form{
-  max-width:700px;
-  margin:0 auto;
-  text-align:left;
+@media (max-width: 980px){
+  .layout{ grid-template-columns: 1fr; }
+  .card-title{ font-size:30px; }
+  .brand-title{ font-size:44px; }
+  .creator-box{ justify-content:flex-start; }
+}
+/* ===== FIX: الصور ما تطلع برا الإطار ===== */
+.recipes-table td,
+.recipes-table th{
+  overflow: hidden;          /* يمنع أي شيء يطلع برا الخانة */
 }
 
-.login-form fieldset,
-.auth-form fieldset{
-  border:2px solid #bdbdbd;
-  padding:30px 25px 35px;
-}
-
-.login-form legend,
-.auth-form legend{
-  font-size:36px;
-  padding:0 10px;
-  font-weight:700;
+.photo-td{
   text-align:center;
+  vertical-align: middle;
 }
 
-.login-form label,
-.auth-form label{
-  display:block;
-  font-size:18px;
-  margin:18px 0 8px;
+/* خلية صورة الوصفة: نخليها إطار ثابت والصورة داخله */
+.recipe-photo{
+  width: 95px;               /* أصغر شوي */
+  height: 70px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
-.login-form input,
-.auth-form input[type="text"],
-.auth-form input[type="email"],
-.auth-form input[type="password"]{
-  width:100%;
-  padding:12px;
-  border:none;
-  background:#f2f2f2;
-  font-size:16px;
+/* لو عندك صور "مكسورة" تطلع بإطار أبيض كبير، هذا يقللها */
+.recipe-photo,
+.recipe-photo.small{
+  max-width: 100%;
 }
 
-/* Login buttons stacked centered */
-.login-form .btn,
-.login-form button{
-  display:block;
-  width:min(420px,90%);
-  margin:14px auto 0;
+/* ===== FIX: Creator (الأيقونة + الاسم) محاذاة مضبوط ===== */
+.creator-td{
+  vertical-align: middle;
+  text-align: center;        /* لأننا مسوين creator-box بالنص */
+  overflow: hidden;
 }
 
-/* =========================
-   SIGN UP: Choose Image (label button)
-========================= */
-.auth-form input[type="file"]{ display:none; }
-
-.profile-row{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:16px;
-  margin:12px 0 18px;
+.creator-box{
+  display: inline-flex !important;  /* بدل flex عشان ما يتمدد داخل الخلية */
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px;
+  max-width: 100%;
 }
 
-.file-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  height:42px;
-  min-width:160px;
-
-  padding:0 16px;
-  border:2px solid #bdbdbd;
-  border-radius:8px;
-
-  background:#e6e6e6;
-  cursor:pointer;
-
-  font-size:16px;
-  color:#1a1a1a;
-}
-.file-btn:hover{ background:#dcdcdc; }
-
-.profile-preview{
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  border:2px solid #bdbdbd;
-  object-fit:cover;
-  background:#eeeeee;
-  display:block;
+.creator-avatar{
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  flex: 0 0 34px;
+  display: block;
 }
 
-/* Sign up buttons stacked centered */
-.auth-form .btn,
-.auth-form button{
-  display:block;
-  width:min(420px,90%);
-  margin:14px auto 0;
+/* الاسم لا يطلع برا */
+.creator-text{
+  max-width: 140px;          /* يمنع التمدد */
+  white-space: normal;
+  word-break: break-word;
+  text-align: left;
 }
-
-/* =========================
-   USER PAGE
-========================= */
-.user-page .main{
-  align-items:flex-start;
-  padding-top:30px;
-}
-
-/* Header same color as footer */
-.user-page .header{
-  background:#fdfaf3;
-  border-bottom:2px solid #bdbdbd;
-  padding:14px 20px;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.user-page .header .logo{
-  max-width:180px;
-  margin:0;
-  justify-content:flex-start;
-}
-.user-page .header .logo img{ max-width:180px; }
-
-/* Make logout button nice */
-.user-page #logoutBtn{
-  height:42px;
-  width:180px;
-  font-size:16px;
-}
-
-/* Layout */
-.user-page .layout{
-  display:flex;
-  gap:18px;
-  align-items:flex-start;
-  margin-top:18px;
-  text-align:left;
-}
-
-/* Left info */
-.user-page .info-box{
-  width:280px;
-  border:2px solid #bdbdbd;
-  border-radius:10px;
-  padding:16px;
-  background:#fff;
-}
-
-.user-page .info-box img{
-  width:90px;
-  height:90px;
-  border-radius:50%;
-  border:2px solid #bdbdbd;
-  object-fit:cover;
-  background:#eeeeee;
-  display:block;
-  margin:10px auto 12px;
-}
-
-.user-page .info-box p{
-  margin:8px 0;
-  text-align:center;
-}
-
-/* My Recipes as link */
-.user-page .info-box h3{
-  font-size:14px;
-  text-align:center;
-  margin:12px 0 10px;
-  color:#1a73e8;
-  font-weight:normal;
-  cursor:pointer;
-  text-decoration:underline;
-  text-decoration-thickness:2px;
-}
-.user-page .info-box h3:hover{ color:#0b57d0; }
-
-/* Right recipes */
-.user-page .recipes-box{
-  flex:1;
-  border:2px solid #bdbdbd;
-  border-radius:10px;
-  padding:16px;
-  background:#fff;
-}
-
-/* Filter row */
-.user-page .filter-row{
-  display:flex;
-  justify-content:flex-end;
-  gap:10px;
-  margin-bottom:12px;
-  align-items:center;
-}
-
-.user-page .category-select{
-  height:42px;
-  font-size:15px;
-  padding:0 10px;
-  border:2px solid #bdbdbd;
-  border-radius:8px;
-  background:#f2f2f2;
-  width:220px;
-}
-
-/* Tables */
-.user-page .table{
-  width:100%;
-  border-collapse:collapse;
-  text-align:left;
-}
-
-.user-page .table th,
-.user-page .table td{
-  border:2px solid #bdbdbd;
-  padding:12px;
-  vertical-align:middle;
-  font-size:14px;
-}
-
-.user-page .table th{
-  background:#fdfaf3;
-  font-weight:700;
-}
-
-.user-page .table img{
-  width:70px;
-  height:50px;
-  object-fit:cover;
-  border:1px solid #d7d7d7;
-  border-radius:6px;
-  display:block;
-}
-
-/* Favourites box */
-.user-page .favourites-box{
-  margin-top:18px;
-  border:2px solid #bdbdbd;
-  border-radius:10px;
-  padding:16px;
-  background:#fff;
-  text-align:left;
-}
-
-/* Heart */
-.user-page .heart{
-  font-size:22px;
-  line-height:1;
-  color:#777;
-  cursor:pointer;
-  user-select:none;
-}
-.user-page .heart.active{ color:#e11d48; }
-.user-page .heart:active{ color:#e11d48; }
-
-/* Remove link */
-.user-page .remove-link{
-  color:#1a73e8;
-  text-decoration:none;
-}
-.user-page .remove-link:hover{
-  color:#0b57d0;
-  text-decoration:underline;
-  text-decoration-thickness:2px;
-}
-
-/* Responsive */
-@media (max-width:900px){
-  .user-page .layout{ flex-direction:column; }
-  .user-page .info-box{ width:100%; }
-  .user-page .filter-row{ justify-content:flex-start; flex-wrap:wrap; }
-  .user-page .category-select{ width:min(420px,100%); }
-}
-/* ===== Align Favourite table with Recipes table (CSS ONLY) ===== */
-
-/* نفس عرض بوكس الريسبيز */
-.user-page .favourites-box{
-  width: calc(100% - 280px - 18px);   /* 280 = info-box , 18 = gap */
-  margin-left: calc(280px + 18px);    /* يبدأ بعد info-box */
-  margin-top: 18px;
-}
-
-/* لو الصفحة صارت عمودية بالموبايل */
-@media (max-width:900px){
-  .user-page .favourites-box{
-    width: 100%;
-    margin-left: 0;
-  }
-}
-/* ===== Header Navigation ===== */
-.header{
-  background:#fdfaf3;
-  border-bottom:2px solid #bdbdbd;
-  padding:14px 24px;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.nav{
-  display:flex;
-  gap:24px;
-}
-
-/* links */
-.nav-link{
-  position:relative;
-  font-size:16px;
-  color:#1a1a1a;
-  text-decoration:none;
-  padding-bottom:4px;
-}
-
-/* hover underline */
-.nav-link::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:0;
-  width:0;
-  height:2px;
-  background:#1a1a1a;
-  transition:width 0.2s ease;
-}
-
-.nav-link:hover::after{
-  width:100%;
-}
-
-/* active page */
-.nav-link.active::after{
-  width:100%;
-}
-.header{
-  background:#fdfaf3;
-  border-bottom:2px solid #bdbdbd;
-  padding:14px 24px;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.header-left,
-.header-right{
-  display:flex;
-  align-items:center;
-}
-
-.nav{
-  display:flex;
-  gap:24px;
-}
-
-/* links */
-.nav-link{
-  position:relative;
-  font-size:16px;
-  color:#1a1a1a;
-  text-decoration:none;
-  padding-bottom:4px;
-}
-
-/* hover underline */
-.nav-link::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:0;
-  width:0;
-  height:2px;
-  background:#1a1a1a;
-  transition:width 0.2s ease;
-}
-
-.nav-link:hover::after{
-  width:100%;
-}
-
-/* active page */
-.nav-link.active::after{
-  width:100%;
-}
-
