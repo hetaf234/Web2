@@ -1,198 +1,269 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sapori D'Italia - User Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Page - Sapori d'Italia</title>
   <link rel="stylesheet" href="user.css" />
-  <script src="user.js"></script>
-
 </head>
 
-<body class="user-page">
+<body>
 
-  <!-- Header -->
+  <!-- HEADER  -->
   <header class="header">
-  <div class="header-left">
-    <div class="logo">
-      <img src="image/logo.png" alt="Sapori D'Italia">
-    </div>
-  </div>
-
-  <nav class="nav">
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="userPage.html" class="nav-link active">Recipes</a>
-  </nav>
-
-  <div class="header-right">
-    <button id="logoutBtn" class="btn btn-small btn-wideish">Log out</button>
-  </div>
-</header>
-
+    <div class="header-left">
+      <div class="logo">
+        <img src="image/logo.png" alt="Sapori D'Italia">
+      </div>
     </div>
 
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="userPage.html" class="nav-link active">Recipes</a>
+    </nav>
 
-  <!-- Main -->
-  <main class="main">
-    <section class="card">
+    <div class="header-right">
+      <button id="logoutBtn" class="btn btn-small btn-wideish" type="button">Log out</button>
+    </div>
+  </header>
 
-      <h1>Sapori D&#39;Italia</h1>
-      <p class="subtitle">All available recipes and your favourites</p>
+  <!-- PAGE -->
+  <main class="page">
 
-      <div class="layout">
+    <div class="brand">
+      <h1 class="brand-title">Sapori D'Italia</h1>
+      <p class="brand-sub">All available recipes and your favourites</p>
+    </div>
 
-        <!-- My Information -->
-        <div class="info-box">
-          <h2>My Information</h2>
+    <section class="layout">
 
-          <img src="image/icon.png" alt="icon photo">
+      <!-- LEFT: My info -->
+      <aside class="card info-card" aria-label="My information">
+        <h2 class="card-title">My Information</h2>
 
-          <p><strong>Emily Anderson</strong></p>
-          <p>Email: emily@gmail.com</p>
-
-          <hr>
-
-          <h3>My Recipes</h3>
-          <p>Total Recipes: 8</p>
-          <p>Total Likes: 42</p>
+        <div class="profile">
+          <img class="avatar" src="image/icon.png" alt="Profile photo">
+          <div class="profile-text">
+            <div class="profile-name">Emily Anderson</div>
+            <div class="profile-email">Email: emily@gmail.com</div>
+          </div>
         </div>
 
-        <!-- All Available Recipes -->
-        <div class="recipes-box">
+        <div class="info-links">
+          <a class="info-link" href="myRecipe.html">My Recipes</a>
+        </div>
 
-          <div class="filter-row">
-            <input type="text" placeholder="Search...">
-<button class="btn btn-small btn-filter" type="button">Filter</button>
+        <div class="stats">
+          <div>Total Recipes: <strong>8</strong></div>
+          <div>Total Likes: <strong>42</strong></div>
+        </div>
+      </aside>
+
+      <!-- RIGHT: Tables -->
+      <div class="right-col">
+
+        <!-- All Recipes -->
+        <section class="card" aria-label="All available recipes">
+          <div class="card-head">
+            <h2 class="card-title">All Available Recipes</h2>
+
+            <div class="filters">
+              <select id="categorySelect" class="select" aria-label="Category filter">
+                <option value="all">All</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="dinner">Dinner</option>
+                <option value="dessert">Dessert</option>
+              </select>
+              <button id="filterBtn" class="btn btn-small" type="button">Filter</button>
+            </div>
           </div>
 
-          <h2>All Available Recipes</h2>
+          <div class="table-wrap">
+            <table class="recipes-table">
+              <thead>
+                <tr>
+                  <th>Recipe Name</th>
+                  <th>Recipe Photo</th>
+                  <th>Recipe Creator</th>
+                  <th>Category</th>
+                  <th>Likes</th>
+                  <th>Fav</th>
+                </tr>
+              </thead>
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Recipe Name</th>
-                <th>Photo</th>
-                <th>Creator</th>
-                <th>Category</th>
-                <th>Likes</th>
-                <th>Fav</th>
-              </tr>
-            </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a class="recipe-link" href="viewRecipe.html?recipe=cornetto">Cornetto</a>
+                  </td>
 
-            <tbody>
-              <tr>
-                <td>Cornetto</td>
-                <td><img src="image/cornetto.png" alt="Cornetto"></td>
-                <td>Marco</td>
-                <td>Breakfast</td>
-                <td>56</td>
-                <td><span class="heart">♡</span></td>
-              </tr>
+                  <td class="photo-td">
+                    <img class="recipe-photo" src="image/Cornetto.png" alt="Cornetto">
+                  </td>
 
-              <tr>
-                <td>Frittata</td>
-                <td><img src="image/frittata.jpg" alt="Frittata"></td>
-                <td>Lucia</td>
-                <td>Breakfast</td>
-                <td>73</td>
-                <td><span class="heart">♡</span></td>
-              </tr>
+                  <td class="creator-td">
+                    <div class="creator-box">
+                      <img class="creator-avatar" src="image/icon.png" alt="Creator">
+                      <span class="creator-text">Marco</span>
+                    </div>
+                  </td>
 
-              <tr>
-                <td>Ricotta Toast</td>
-                <td><img src="image/ricotta_toast.jpg" alt="Ricotta Toast"></td>
-                <td>Anna</td>
-                <td>Breakfast</td>
-                <td>41</td>
-                <td><span class="heart">♡</span></td>
-              </tr>
+                  <td class="center-td">Breakfast</td>
+                  <td class="center-td">56</td>
 
-              <tr>
-                <td>Margherita Pizza</td>
-                <td><img src="image/pizza_margherita.jpg" alt="Margherita Pizza"></td>
-                <td>Luigi</td>
-                <td>Lunch</td>
-                <td>128</td>
-                <td><span class="heart">♡</span></td>
-              </tr>
+                  <td class="center-td">
+                    <button class="heart-btn" type="button" aria-label="Add to favourites">
+                      <span class="heart">♡</span>
+                    </button>
+                  </td>
+                </tr>
 
-              <tr>
-                <td>Carbonara</td>
-                <td><img src="image/carbonara.png" alt="Carbonara"></td>
-                <td>Paolo</td>
-                <td>Lunch</td>
-                <td>142</td>
-                <td><span class="heart">♡</span></td>
-              </tr>
+                <tr>
+                  <td>
+                    <a class="recipe-link" href="viewRecipe.html?recipe=frittata">Frittata</a>
+                  </td>
 
-              <tr>
-                <td>Lasagna</td>
-                <td><img src="image/lasagna.png" alt="Lasagna"></td>
-                <td>Sofia</td>
-                <td>Lunch</td>
-                <td>119</td>
-                <td><span class="heart">♡</span></td>
-              </tr>
+                  <td class="photo-td">
+                    <img class="recipe-photo" src="image/Frittata.jpg" alt="Frittata">
+                  </td>
 
-              <tr>
-                <td>Tiramisu</td>
-                <td><img src="image/tiramisu.png" alt="Tiramisu"></td>
-                <td>Giulia</td>
-                <td>Dessert</td>
-                <td>210</td>
-                <td><span class="heart">♡</span></td>
-              </tr>
+                  <td class="creator-td">
+                    <div class="creator-box">
+                      <img class="creator-avatar" src="image/icon.png" alt="Creator">
+                      <span class="creator-text">Lucia</span>
+                    </div>
+                  </td>
 
-              <tr>
-                <td>Panna Cotta</td>
-                <td><img src="image/panna_cotta.png" alt="Panna Cotta"></td>
-                <td>Elena</td>
-                <td>Dessert</td>
-                <td>98</td>
-                <td><span class="heart">♡</span></td>
-              </tr>
+                  <td class="center-td">Breakfast</td>
+                  <td class="center-td">73</td>
 
-              <tr>
-                <td>Cannoli</td>
-                <td><img src="image/cannoli.png" alt="Cannoli"></td>
-                <td>Marco</td>
-                <td>Dessert</td>
-                <td>134</td>
-                <td><span class="heart">♡</span></td>
-              </tr>
-            </tbody>
-          </table>
+                  <td class="center-td">
+                    <button class="heart-btn" type="button" aria-label="Add to favourites">
+                      <span class="heart">♡</span>
+                    </button>
+                  </td>
+                </tr>
 
-        </div>
+                <tr>
+                  <td>
+                    <a class="recipe-link" href="viewRecipe.html?recipe=margherita">Margherita Pizza</a>
+                  </td>
+
+                  <td class="photo-td">
+                    <img class="recipe-photo" src="image/pizza_margherita.jpg" alt="Margherita Pizza">
+                  </td>
+
+                  <td class="creator-td">
+                    <div class="creator-box">
+                      <img class="creator-avatar" src="image/icon.png" alt="Creator">
+                      <span class="creator-text">Giulia</span>
+                    </div>
+                  </td>
+
+                  <td class="center-td">Dinner</td>
+                  <td class="center-td">77</td>
+
+                  <td class="center-td">
+                    <button class="heart-btn" type="button" aria-label="Add to favourites">
+                      <span class="heart">♡</span>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="is-fav-demo">
+                  <td>
+                    <a class="recipe-link" href="viewRecipe.html?recipe=tiramisu">Tiramisu</a>
+                  </td>
+
+                  <td class="photo-td">
+                    <img class="recipe-photo" src="image/Tiramisu.png" alt="Tiramisu">
+                  </td>
+
+                  <td class="creator-td">
+                    <div class="creator-box">
+                      <img class="creator-avatar" src="image/icon.png" alt="Creator">
+                      <span class="creator-text">Mia</span>
+                    </div>
+                  </td>
+
+                  <td class="center-td">Dessert</td>
+                  <td class="center-td">120</td>
+
+                  <td class="center-td">
+                    <button class="heart-btn is-active" type="button" aria-label="In favourites">
+                      <span class="heart">♥</span>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a class="recipe-link" href="viewRecipe.html?recipe=panna-cotta">Panna Cotta</a>
+                  </td>
+
+                  <td class="photo-td">
+                    <img class="recipe-photo" src="image/panna_cotta.png" alt="Panna Cotta">
+                  </td>
+
+                  <td class="creator-td">
+                    <div class="creator-box">
+                      <img class="creator-avatar" src="image/icon.png" alt="Creator">
+                      <span class="creator-text">Nora</span>
+                    </div>
+                  </td>
+
+                  <td class="center-td">Dessert</td>
+                  <td class="center-td">69</td>
+
+                  <td class="center-td">
+                    <button class="heart-btn" type="button" aria-label="Add to favourites">
+                      <span class="heart">♡</span>
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Favourite Recipes (aligned same width) -->
+        <section class="card" aria-label="My favourite recipes">
+          <div class="card-head">
+            <h2 class="card-title">My Favourite Recipes</h2>
+          </div>
+
+          <div class="table-wrap">
+            <table class="fav-table">
+              <thead>
+                <tr>
+                  <th>Recipe Name</th>
+                  <th>Photo</th>
+                  <th class="center-td">Remove</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <!-- demo one recipe as favourite -->
+                <tr>
+                  <td class="fav-name">Tiramisu</td>
+                  <td class="photo-td">
+                    <img class="recipe-photo small" src="image/Tiramisu.png" alt="Tiramisu">
+                  </td>
+                  <td class="center-td">
+                    <a class="remove-link" href="#">Remove</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
       </div>
-
-      <!-- Favourite Recipes -->
-      <div class="favourites-box">
-        <h2>My Favourite Recipes</h2>
-
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Recipe Name</th>
-              <th>Photo</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>Cannoli</td>
-              <td><img src="image/cannoli.png" alt="Cannoli"></td>
-<td><a href="#" class="remove-link">Remove</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER (same as girls style) -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-left">
@@ -201,27 +272,22 @@
 
       <div class="footer-mid">
         <span class="contact-item">
-          <img class="icon" src="image/email.png" alt="Email icon">
-          <a class="footer-link" href="mailto:Sapori.DItalia@gmail.com">
-            Sapori.DItalia@gmail.com
-          </a>
+          <img class="icon" src="image/email.png" alt="Email icon" />
+          <a class="footer-link" href="mailto:Sapori.DItalia@gmail.com">Sapori.DItalia@gmail.com</a>
         </span>
 
         <span class="contact-item">
-          <img class="icon" src="image/phone.png" alt="Phone icon">
-          <a class="footer-link" href="tel:+966556678127">
-            +966 556678127
-          </a>
+          <img class="icon" src="image/phone.png" alt="Phone icon" />
+          <a class="footer-link" href="tel:+966556678127">+966 556678127</a>
         </span>
       </div>
 
       <div class="footer-bottom">
-        © 2026
-        <a class="footer-link" href="index.html">Sapori D&#39;Italia</a>.
-        All rights reserved.
+        &copy; 2026 <a class="footer-link" href="index.html">Sapori D&#39;Italia</a>. All rights reserved.
       </div>
     </div>
   </footer>
 
+  <script src="user.js"></script>
 </body>
 </html>
