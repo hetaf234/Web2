@@ -490,3 +490,109 @@ a:hover{
   word-break: break-word;
   text-align: left;
 }
+/* ===== HEADER (SAME AS GIRLS) ===== */
+.header{
+  width:100%;
+  background:#fdfaf3;
+  border-bottom:2px solid #bdbdbd;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 24px;
+}
+
+.header-left{
+  display:flex;
+  align-items:center;
+}
+
+.logo img{
+  max-width:260px;
+  width:100%;
+  height:auto;
+  display:block;
+  border:1px solid #d7d7d7;
+  background:#eeeeee;
+}
+
+.nav{
+  display:flex;
+  gap:34px;
+  align-items:center;
+}
+
+.nav-link{
+  font-size:18px;
+  font-weight:700;
+  color:#1a1a1a;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+.nav-link.active{
+  font-weight:800;
+}
+
+.header-right{
+  display:flex;
+  align-items:center;
+}
+
+/* ===== FOOTER (SAME AS GIRLS) ===== */
+.footer{
+  background:#fdfaf3;
+  border-top:2px solid #bdbdbd;
+  padding:26px 18px 34px;
+}
+
+.footer-inner{
+  max-width:1080px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.footer-left{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:16px;
+}
+
+.footer-mid{
+  display:flex;
+  justify-content:center;
+  gap:36px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+.contact-item{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size:15px;
+}
+
+.icon{
+  width:20px;
+  height:20px;
+  object-fit:contain;
+}
+
+.footer-link{
+  color:#1a1a1a;
+  text-decoration:underline;
+  font-weight:600;
+}
+
+.footer-bottom{
+  font-size:16px;
+}
+
+/* ===== RESPONSIVE HEADER ===== */
+@media (max-width:720px){
+  .header{
+    flex-direction:column;
+    gap:14px;
+  }
+}
