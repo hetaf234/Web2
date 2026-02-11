@@ -9,11 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Filter (Phase 1: demo only)
-  if (filterBtn) {
-    filterBtn.addEventListener("click", () => {
-      alert("Filtering will be implemented in Phase 2 (Demo only).");
-    });
   }
 
   // Favourite hearts (Phase 1: demo only)
