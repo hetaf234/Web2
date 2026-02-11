@@ -596,3 +596,33 @@ a:hover{
     gap:14px;
   }
 }
+.welcome{
+  font-size:18px;
+  margin-top:12px;
+  font-weight:600;
+  color:#555;
+}
+.info-card .btn{
+  display: block;
+  margin: 20px auto 0;
+}
+.info-card{
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card .btn{
+  align-self: center;   
+  margin-top: 20px;
+}
+.info-card .btn{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  
+}
+.info-card .btn{
+  line-height: normal;
+  padding-top: 12px;
+  padding-bottom: 4px;
+}
